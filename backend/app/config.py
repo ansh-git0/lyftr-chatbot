@@ -56,7 +56,7 @@ class Settings:
     cache_dir: str = ""
     cache_ttl_seconds: int = 86400
     default_system_prompt: str = DEFAULT_SYSTEM_PROMPT
-    llm_timeout_seconds: int = 30
+    llm_timeout_seconds: int = 15
     key_cooldown_seconds: int = 60
     max_history_messages: int = 40
     max_output_tokens: int = 2048
@@ -93,7 +93,7 @@ def load_settings() -> Settings:
         cache_ttl_seconds=_env_int("LLM_CACHE_TTL_SECONDS", 86400),
         default_system_prompt=os.getenv("DEFAULT_SYSTEM_PROMPT", "").strip()
         or DEFAULT_SYSTEM_PROMPT,
-        llm_timeout_seconds=_env_int("LLM_TIMEOUT_SECONDS", 30),
+        llm_timeout_seconds=_env_int("LLM_TIMEOUT_SECONDS", 15),
         key_cooldown_seconds=_env_int("KEY_COOLDOWN_SECONDS", 60),
         max_history_messages=_env_int("MAX_HISTORY_MESSAGES", 40),
         max_output_tokens=_env_int("LLM_MAX_OUTPUT_TOKENS", 2048),

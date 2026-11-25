@@ -69,7 +69,7 @@ VITE_API_BASE_URL=http://localhost:8000 npm run dev    # http://localhost:3000
 | `LLM_CACHE_TYPE` | `disk` | `disk` (persists on the volume) or `local` (in-memory) |
 | `LLM_CACHE_DIR` / `LLM_CACHE_TTL_SECONDS` | next to the DB / `86400` | Cache location and TTL |
 | `DEFAULT_SYSTEM_PROMPT` | built-in | Used when a session has no prompt of its own |
-| `LLM_TIMEOUT_SECONDS`, `LLM_MAX_OUTPUT_TOKENS` | `30`, `2048` (Gemini 3.x thinking tokens count as output) | Per-call limits |
+| `LLM_TIMEOUT_SECONDS`, `LLM_MAX_OUTPUT_TOKENS` | `15`, `2048` (Gemini 3.x thinking tokens count as output) | Per-call limits |
 | `KEY_COOLDOWN_SECONDS` | `60` | How long a key that hit a real 429 or quota error is moved to the back of the pool |
 | `MAX_HISTORY_MESSAGES` | `40` | How many history messages are sent to the LLM |
 | `USE_SYSTEM_CERTS` | `false` | Local dev only: trust the OS certificate store (for TLS-inspecting antivirus or proxies) |
