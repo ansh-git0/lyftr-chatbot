@@ -173,8 +173,9 @@ curl -s $API/sessions/nope/messages                                             
 
 ## 5. Setup Used
 
-- Editor: *(fill in, e.g. VS Code)*
-- AI tools: Claude Code (Claude Opus 5.5) for scaffolding, implementation and tests, with manual review of each design decision.
+- Editor / environment: Claude Code desktop app (Code tab) on Windows 11, with Docker Desktop, Node.js 26 and Python 3.11.
+- AI tools: Claude Code (Claude Opus 5.5). It wrote the code and tests, checked LiteLLM's cache-key and exception behaviour against its source, and ran the stack locally, in Docker and on the live deployment.
+- Hosting: Render (backend, Docker runtime, free plan) and Vercel (frontend, Vite preset).
 
 ## 6. Bonus features
 

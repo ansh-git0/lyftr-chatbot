@@ -9,3 +9,4 @@ backend/data/
 *.db
 *.db-*
 .claude/
+DEMO_SCRIPT.md
