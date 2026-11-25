@@ -14,10 +14,12 @@ React (Vite, nginx)  ──HTTP/JSON──►  FastAPI
 
 | Tier | URL |
 |---|---|
-| Frontend | `https://<your-frontend>.vercel.app` |
-| Backend | `https://<your-backend>.onrender.com` (`/health`) |
-| Repository | `https://github.com/<you>/lyftr-chatbot` |
+| Frontend | https://lyftr-chatbot-snowy.vercel.app |
+| Backend | https://lyftr-chatbot-backend-fd3w.onrender.com ([`/health`](https://lyftr-chatbot-backend-fd3w.onrender.com/health)) |
+| Repository | https://github.com/ansh-git0/lyftr-chatbot |
 | Demo video | `<link>` |
+
+> The backend runs on Render's free plan, so it sleeps after about 15 minutes of inactivity. The first request after that can take about 50 seconds while it wakes up. Free instances also have no persistent disk, so SQLite history and the disk cache reset when the service redeploys or restarts. Locally, `make up` keeps both on the `chat-data` volume.
 
 ## 2. Run locally
 
