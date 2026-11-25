@@ -46,7 +46,7 @@ DEFAULT_SYSTEM_PROMPT = (
 @dataclass(frozen=True)
 class Settings:
     api_keys: list[str] = field(default_factory=list)
-    model: str = "gemini/gemini-3.5-flash"
+    model: str = "gemini/gemini-3.5-flash-lite"
     # Optional per-key model override, same order as api_keys (blank = `model`).
     key_models: list[str] = field(default_factory=list)
     database_url: str = "sqlite:///./data/app.db"
@@ -81,7 +81,7 @@ class Settings:
 def load_settings() -> Settings:
     return Settings(
         api_keys=_env_list("LLM_API_KEYS"),
-        model=os.getenv("LLM_MODEL", "").strip() or "gemini/gemini-3.5-flash",
+        model=os.getenv("LLM_MODEL", "").strip() or "gemini/gemini-3.5-flash-lite",
         key_models=[m.strip() for m in os.getenv("LLM_KEY_MODELS", "").split(",")]
         if os.getenv("LLM_KEY_MODELS", "").strip()
         else [],

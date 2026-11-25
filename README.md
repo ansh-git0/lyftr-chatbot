@@ -61,7 +61,7 @@ VITE_API_BASE_URL=http://localhost:8000 npm run dev    # http://localhost:3000
 | Variable | Default | Meaning |
 |---|---|---|
 | `LLM_API_KEYS` | (none) | Comma-separated key pool, at least 2. Ids are `key_1`, `key_2`, … in this order |
-| `LLM_MODEL` | `gemini/gemini-3.5-flash` | LiteLLM model name |
+| `LLM_MODEL` | `gemini/gemini-3.5-flash-lite` | LiteLLM model name |
 | `LLM_KEY_MODELS` | (empty) | Optional per-key model override, in the same order as the keys (lets you span several models or providers) |
 | `DATABASE_URL` | `sqlite:///./data/app.db` (`sqlite:////data/app.db` in Docker) | SQLite file location |
 | `ALLOWED_ORIGINS` | `http://localhost:3000` | Comma-separated CORS origins |
